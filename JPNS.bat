@@ -1,11 +1,12 @@
  @echo off
  
 color 0a
-title BUTTER v0.7.2
+title BUTTER v0.7.4
 goto boot
 :boot
 cls
-start "C:\Users\drraj\Notepad++\msgbox.vbs" "X:\apps\welcome_box.vbs"
+echo welcome!
+if exist welcome_box.vbs do start "C:\Users\%username%\Notepad++\msgbox.vbs" "X:\apps\SABER\welcome_box.vbs"
 timeout /T 1 /NOBREAK >nul
 cls
 echo finding kernel.......
@@ -36,7 +37,7 @@ function CLCK (
 cls
 echo What Would You Like To Do? Type the number.
 echo.
-echo 1.System Info 2.Calc 3.dates menu 4.spinning rage 7.power options 8.files 9.productivity
+echo 1.System Info 2.Calc 3.dates menu 4.spinning rage 7.power options 8.GUI interface 9.productivity
 echo 6.browser menu 5.help 10.folder creator 11.list disks 12.email sender (under development) 14.Drive rec
 echo 15.randomness
 ECHO current time: %time% date: %date% name: %name% password: 9. 
@@ -50,13 +51,13 @@ if %input% == 4 goto spinningRage
 if %input% == 5 goto help
 if %input% == 6 goto browserMenu
 if %input% == 7 goto powerOptions
-if %imput% == 8 goto fileSystem
+if %imput% == 8 goto GUIInterface
 if %input% == 9 goto productivity
 if %input% == "A" 
 if %input% == 6 goto GMenu
 if %input% == 10 goto FolderCreator
 if %input% == 11 goto DriveDisplay
-if %input% == 12 goto emailer
+if %input% == 12 start "C:\Users\drraj\Notepad++\msgbox.vbs" "C:\users\%username%\desktop\warning.vbs"
 if %input% == 14 goto DRVRecovery
 if %input% == 15 goto random
 
@@ -68,7 +69,7 @@ echo     BUTTER OS
 echo.========================
 echo     DETAILS  
 echo.
-echo     VERSION = 0.7.2
+echo     VERSION = 0.7.4
 echo.     
 echo     RAM = 1GB
 
@@ -321,3 +322,6 @@ set /p SD= sel:
 if %SD% == 1 goto browser
 if %SD% == 2 goto searchHistoryFinder
 if %SD% == 3 goto menu
+:GUIInterface
+start "X:\apps\SABER\EGI.cmd"
+
