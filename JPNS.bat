@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title BUTTER v0.7.1
+title BUTTER v0.7.2
 goto boot
 :boot
 cls
@@ -63,26 +63,29 @@ if %input% == 15 goto random
 :info
 
 cls
-echo.=======================
+echo.========================
 echo     BUTTER OS
-echo.=======================
+echo.========================
 echo     DETAILS  
 echo.
-echo     VERSION = 0.7.1
+echo     VERSION = 0.7.2
 echo.     
 echo     RAM = 1GB
+
 echo.
-echo     CORE = INTEL I5
+echo     CORE = %random%
 echo.
 echo     HARD_DRIVE = 250GB     
 echo.   
-echo     Kernel ver = 5.8.0
+echo     Kernel ver = 5.8.1
 echo.  
 echo    Build = 3
 echo.
-echo.========================
-echo  @Copyright XCoffee.inc
-echo.========================
+echo.=========================
+echo  @Copyright XCoffee.inc 
+echo.
+echo  GPL Public Liscense 3.0
+echo.=========================
 echo     account
 echo.
 echo  name: %name%
