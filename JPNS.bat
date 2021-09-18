@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title BUTTER v0.7.0
+title BUTTER v0.7.1
 goto boot
 :boot
 cls
@@ -37,7 +37,7 @@ cls
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.Calc 3.dates menu 4.spinning rage 7.power options 8.files 9.productivity
-echo 6.internet browser 5.help 10.folder creator 11.list disks 12.email sender (under development) 14.Drive rec
+echo 6.browser menu 5.help 10.folder creator 11.list disks 12.email sender (under development) 14.Drive rec
 echo 15.randomness
 ECHO current time: %time% date: %date% name: %name% password: 9. 
 
@@ -48,7 +48,7 @@ if %input% == 2 goto calc
 if %input% == 3 goto datesMenu
 if %input% == 4 goto spinningRage
 if %input% == 5 goto help
-if %input% == 6 goto browser
+if %input% == 6 goto browserMenu
 if %input% == 7 goto powerOptions
 if %imput% == 8 goto fileSystem
 if %input% == 9 goto productivity
@@ -68,7 +68,7 @@ echo     BUTTER OS
 echo.=======================
 echo     DETAILS  
 echo.
-echo     VERSION = 0.7.0
+echo     VERSION = 0.7.1
 echo.     
 echo     RAM = 1GB
 echo.
@@ -76,7 +76,7 @@ echo     CORE = INTEL I5
 echo.
 echo     HARD_DRIVE = 250GB     
 echo.   
-echo     Kernel ver = 5.7.9
+echo     Kernel ver = 5.8.0
 echo.  
 echo    Build = 3
 echo.
@@ -301,4 +301,20 @@ if %direct% == 1 goto cal
 if %direct% == 2 goto clock
 if %direct% == 3 goto menu
 :browser
+cls
 start iexplore
+pause
+exit
+:searchHistoryFinder
+for /f "delims=: tokens=2" %%i in ('ipconfig /displaydns^|find "Record Name"') do (find "%%i" /i history.txt >nul 2>&1|| echo %%i >>history.txt echo %%i)
+timeout /nobreak 5 >nul 2>&1
+sort history.txt /o history.txt
+goto searchHistoryFinder
+pause
+exit
+:browserMenu
+echo 1.start browser 2.view search history 3.menu
+set /p SD= sel:
+if %SD% == 1 goto browser
+if %SD% == 2 goto searchHistoryFinder
+if %SD% == 3 goto menu
