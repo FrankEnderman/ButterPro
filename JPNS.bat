@@ -1,18 +1,17 @@
  @echo off
  
 color 0a
-title BUTTER v0.6.9
+title BUTTER v0.7.0
 goto boot
 :boot
 cls
 start "C:\Users\drraj\Notepad++\msgbox.vbs" "X:\apps\welcome_box.vbs"
-timeout /T 2 /NOBREAK >nul
+timeout /T 1 /NOBREAK >nul
 cls
 echo finding kernel.......
-timeout /T 2 /NOBREAK >nul
+timeout /T 1 /NOBREAK >nul
 echo Booting butter... This may take a sec
 timeout /T 1 /NOBREAK >nul
-del "X:\apps\BOOTSCS.GUID"
 pause
 cls
 echo boot complete
@@ -38,7 +37,7 @@ cls
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.Calc 3.dates menu 4.spinning rage 7.power options 8.files 9.productivity
-echo 6.games menu 5.help 10.folder creator 11.list disks 12.email sender (under development) 14.Drive rec
+echo 6.internet browser 5.help 10.folder creator 11.list disks 12.email sender (under development) 14.Drive rec
 echo 15.randomness
 ECHO current time: %time% date: %date% name: %name% password: 9. 
 
@@ -49,7 +48,7 @@ if %input% == 2 goto calc
 if %input% == 3 goto datesMenu
 if %input% == 4 goto spinningRage
 if %input% == 5 goto help
-if %input% == 6 start cmd
+if %input% == 6 goto browser
 if %input% == 7 goto powerOptions
 if %imput% == 8 goto fileSystem
 if %input% == 9 goto productivity
@@ -69,7 +68,7 @@ echo     BUTTER OS
 echo.=======================
 echo     DETAILS  
 echo.
-echo     VERSION = 0.6.9
+echo     VERSION = 0.7.0
 echo.     
 echo     RAM = 1GB
 echo.
@@ -301,3 +300,5 @@ set /p direct= select:
 if %direct% == 1 goto cal
 if %direct% == 2 goto clock
 if %direct% == 3 goto menu
+:browser
+start iexplore
