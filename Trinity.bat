@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title Butter Trinity v0.7.5
+title Butter Trinity v0.7.6
 goto boot
 :boot
 cls
@@ -35,6 +35,13 @@ function CLCK (
 
 :menu
 cls
+SET bird[full]="█" "█" "█"
+SET /A "bird[rand]=!RANDOM! %% 2"
+        IF !bird[rand]! EQU 0 (
+            SET /A "bird[num]+=1", "bird[rand]=(!RANDOM! %% 15) + 1", "d[num]=(9 * bird[rand]) - 1", "d[adj]=((21 - (bird[rand] + 5)) * 9) - 1", "d[max]=bird[rand] + 5"
+            SET "bird[!bird[num]!]=!d[num]!;!d[adj]!;29;!bird[rand]!;!d[max]!"
+            SET "bird[list]=!bird[list]! [!bird[num]!]"
+        )
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.spinning rage 7.power options 8.GUI interface 9.productivity
@@ -69,7 +76,7 @@ echo     Butter Trinity OS
 echo.========================
 echo     DETAILS  
 echo.
-echo     VERSION = 0.7.5
+echo     VERSION = 0.7.6
 echo.     
 echo     RAM = 1GB
 
@@ -133,18 +140,7 @@ echo %date%
 echo enter 1 to return to menu
 set /p input=
 if %input% == 1 goto menu
-:GMenu
-cls
-echo Games List
-echo 1. spinning rage
 
-echo 2. command and conquer
-
-echo press 3 to return to the menu screen.
-set /p input=
-if %input% == 1 goto spinningRage
-if %input% == 2 start generals
-if %input% == 3 goto menu
 :calc
 title Calculator- Butter Trinity OS
 cls
@@ -324,8 +320,7 @@ set /p SD= sel:
 if %SD% == 1 goto browser
 if %SD% == 2 goto searchHistoryFinder
 if %SD% == 3 goto menu
-:GUIInterface
-start "X:\apps\SABER\EGI.cmd"
+
 
 :menu2
 echo 1.calc 2.text editor
