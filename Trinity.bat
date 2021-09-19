@@ -326,4 +326,10 @@ if %SD% == 3 goto menu
 echo 1.calc 2.text editor
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
-if %OPTI% == 2 goto TEXT
+if %OPTI% == 2 goto UAC
+:UAC
+cls
+echo do you want to let this program to change your kernel?
+set /p FD= Yes = 1 No = 2:
+if %FD% == 1 goto TEXT
+if %FD% == 2 goto menu
