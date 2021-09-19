@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title BUTTER v0.7.4
+title BUTTER v0.7.5
 goto boot
 :boot
 cls
@@ -15,8 +15,8 @@ echo Booting butter... This may take a sec
 timeout /T 1 /NOBREAK >nul
 pause
 cls
-echo boot complete
-pause
+echo boot complete.... loading objects.....
+timeout /T 1 /NOBREAK >nul
 goto login
 :login
 cls            
@@ -37,7 +37,7 @@ function CLCK (
 cls
 echo What Would You Like To Do? Type the number.
 echo.
-echo 1.System Info 2.Calc 3.dates menu 4.spinning rage 7.power options 8.GUI interface 9.productivity
+echo 1.System Info 2.useful tools menu 3.dates menu 4.spinning rage 7.power options 8.GUI interface 9.productivity
 echo 6.browser menu 5.help 10.folder creator 11.list disks 12.email sender (under development) 14.Drive rec
 echo 15.randomness
 ECHO current time: %time% date: %date% name: %name% password: 9. 
@@ -45,7 +45,7 @@ ECHO current time: %time% date: %date% name: %name% password: 9.
 
 set /p input= choose:
 if %input% == 1 goto info
-if %input% == 2 goto calc 
+if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
 if %input% == 4 goto spinningRage
 if %input% == 5 goto help
@@ -69,7 +69,7 @@ echo     BUTTER OS
 echo.========================
 echo     DETAILS  
 echo.
-echo     VERSION = 0.7.4
+echo     VERSION = 0.7.5
 echo.     
 echo     RAM = 1GB
 
@@ -83,7 +83,7 @@ echo.
 echo    Build = 3
 echo.
 echo.=========================
-echo  @Copyright XCoffee.inc 
+echo  @Copyright Interstar.inc 
 echo.
 echo  GPL Public Liscense 3.0
 echo.=========================
@@ -92,6 +92,8 @@ echo.
 echo  name: %name%
 echo.
 echo  time: %time%
+echo.
+echo  date: %date%
 echo.
 echo Wanna check for update?
 
@@ -325,3 +327,8 @@ if %SD% == 3 goto menu
 :GUIInterface
 start "X:\apps\SABER\EGI.cmd"
 
+:menu2
+echo 1.calc 2.text editor
+set /p OPTI= select option:
+if %OPTI% == 1 goto calc
+if %OPTI% == 2 goto TEXT
