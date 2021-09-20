@@ -4,16 +4,12 @@ color 0a
 title Butter Trinity v0.9
 goto boot
 :boot
-cls
 echo welcome!
 timeout /T 1 /NOBREAK >nul
-cls
 echo finding kernel.......
 timeout /T 1 /NOBREAK >nul
 echo Booting Butter Trinity ... 
 timeout /T 1 /NOBREAK >nul
-pause
-cls
 echo boot complete.... loading objects.....
 timeout /T 1 /NOBREAK >nul
 goto login
