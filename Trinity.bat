@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title Butter Trinity v1.0
+title Butter Trinity v3
 goto boot
 :boot
 echo welcome!
@@ -73,7 +73,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = 1.0
+echo     VERSION = 3
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -181,7 +181,7 @@ pause
 goto menu
 :TEXT
 cls
-echo TEXT EDITOR 1.0
+echo TEXT EDITOR 1.1
 echo Enter name of the text file you want to make
 echo. 
 set /p N=Name 
@@ -358,8 +358,33 @@ if %FD% == 2 goto menu
 start iexplore "https://www.youtube.com/watch?v=-345VbbYTN8"
 :ctrlPanel
 cls
-echo 1.power options 2.productivity 3.menu
+echo 1.power options 2.productivity 3.menu 4.BROKEN MODE (DANGER)
 set /p DFF= select:
 if %DFF% == 1 goto powerOptions
 if %DFF% == 2 goto menu2
 if %DFF% == 3 goto menu
+if %DFF% == 4 goto brokenMode
+:brokenMode
+cls
+echo %random%
+timeout /T 2 /NOBREAK >nul
+echo %random%%random%%random%%random%%random%%random%%random%
+timeout /T 4 /NOBREAK >nul
+echo %random%%random%%random%%random%%random%%random%%random%
+timeout /T 3 /NOBREAK >nul
+echo DRIVE CORRUPT
+timeout /T 1 /NOBREAK >nul
+echo 0x010100000000 DOS error 
+timeout /T 5 /NOBREAK >nul
+echo please wait......
+timeout /T 7 /NOBREAK >nul
+echo repair cannot fix your device. Trying to reset system
+timeout /T 3 /NOBREAK >nul
+cls
+timeout /T 3 /NOBREAK >nul
+echo restarting....
+timeout /T 2 /NOBREAK >nul
+echo BOOTING INTO TRINITY RRBI
+timeout /T 2 /NOBREAK >nul
+pause
+goto boot
