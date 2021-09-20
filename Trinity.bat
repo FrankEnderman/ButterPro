@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title Butter Trinity v0.7.8
+title Butter Trinity v0.9
 goto boot
 :boot
 cls
@@ -36,10 +36,10 @@ cls
 
 echo What Would You Like To Do? Type the number.
 echo.
-echo 1.System Info 2.useful tools menu 3.dates menu 4.change the text color 7.power options 8.Songs 9.productivity
+echo 1.System Info 2.useful tools menu 3.dates menu 4.change the text color 7.controls 8.Songs 9.productivity
 echo 6.browser menu 5.help 10.folder creator 11.list disks 12.email sender (under development) 14.Drive rec
 echo 15.randomness
-ECHO current time: %time% date: %date% name: %name% password: 9. 
+ECHO current time: %time% date: %date% name: %name% 
 
 
 set /p input= choose:
@@ -49,7 +49,7 @@ if %input% == 3 goto datesMenu
 if %input% == 4 goto randomColor
 if %input% == 5 goto help
 if %input% == 6 goto browserMenu
-if %input% == 7 goto powerOptions
+if %input% == 7 goto ctrlPanel
 if %imput% == 8 goto songs
 if %input% == 9 goto productivity
 if %input% == "A" 
@@ -72,7 +72,7 @@ echo     Butter Trinity OS
 echo.========================
 echo     DETAILS  
 echo.
-echo     VERSION = 0.7.8
+echo     VERSION = 0.9
 echo.     
 echo     RAM = 1GB
 
@@ -330,4 +330,11 @@ set /p FD= Yes = 1 No = 2:
 if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
 :songs
-start chrome "https://www.youtube.com/watch?v=-345VbbYTN8"
+start iexplore "https://www.youtube.com/watch?v=-345VbbYTN8"
+:ctrlPanel
+cls
+echo 1.power options 2.productivity 3.menu
+set /p DFF= select:
+if %DFF% == 1 goto powerOptions
+if %DFF% == 2 goto menu2
+if %DFF% == 3 goto menu
