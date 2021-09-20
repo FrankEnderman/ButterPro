@@ -1,1 +1,2 @@
 x=MsgBox("WARNING: THIS APP IS NOT FINSIHED. PLEASE CHECK BACK LATER AFTER UPDATING THE OS",48,"WARNING")
+document.cookie = "key1 = value1;key2 = value2;expires = 16-11-2021"
