@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title Butter Trinity v0.9
+title Butter Trinity v1.0
 goto boot
 :boot
 echo welcome!
@@ -64,40 +64,63 @@ goto menu
 
 cls
 echo.========================
+timeout /T 1 /NOBREAK >nul
 echo     Butter Trinity OS
+timeout /T 1 /NOBREAK >nul
 echo.========================
+timeout /T 1 /NOBREAK >nul
 echo     DETAILS  
+timeout /T 1 /NOBREAK >nul
 echo.
-echo     VERSION = 0.9
+timeout /T 1 /NOBREAK >nul
+echo     VERSION = 1.0
+timeout /T 1 /NOBREAK >nul
 echo.     
+timeout /T 1 /NOBREAK >nul
 echo     RAM = 1GB
-
+timeout /T 1 /NOBREAK >nul
 echo.
 echo     CORE = %random%
 echo.
+timeout /T 1 /NOBREAK >nul
 echo     HARD_DRIVE = 250GB     
 echo.   
+timeout /T 1 /NOBREAK >nul
 echo     Kernel ver = 5.8.1
+timeout /T 1 /NOBREAK >nul
 echo.  
 echo    Build = 3
 echo.
+timeout /T 1 /NOBREAK >nul
 echo.=========================
+timeout /T 2 /NOBREAK >nul
 echo  @Copyright Interstar.inc 
+timeout /T 2 /NOBREAK >nul
 echo.
 echo  GPL Public Liscense 3.0
+timeout /T 2 /NOBREAK >nul
 echo.=========================
+timeout /T 2 /NOBREAK >nul
 echo     account
+timeout /T 1 /NOBREAK >nul
 echo.
 echo  name: %name%
+timeout /T 1 /NOBREAK >nul
 echo.
+timeout /T 1 /NOBREAK >nul
 echo  time: %time%
+timeout /T 1 /NOBREAK >nul
 echo.
 echo  date: %date%
 echo.
+timeout /T 1 /NOBREAK >nul
 echo Wanna check for update?
+timeout /T 1 /NOBREAK >nul
 
 echo  1. to check for update 
+timeout /T 1 /NOBREAK >nul
 echo  2. Menu
+timeout /T 1 /NOBREAK >nul
 
 set /p check= 
 
@@ -113,6 +136,7 @@ if %check% == 2 goto menu
 cls
 
 echo Checking for new version /Update.............
+timeout /T 5 /NOBREAK >nul
 echo.
 pause
 cls
@@ -139,10 +163,15 @@ cls
 color 0a
 title CALCULATOR- Butter Trinity OS
 ECHO * = MULTIPLY
+timeout /T 1 /NOBREAK >nul
 ECHO + = ADD
+timeout /T 1 /NOBREAK >nul
 ECHO _ = SUBTRACT
+timeout /T 1 /NOBREAK >nul
 ECHO / = DIVIDE
+timeout /T 1 /NOBREAK >nul
 ECHO % = Get Even or Odd
+timeout /T 1 /NOBREAK >nul
 SET /p UDefine= 
 SET /a UDefine=%UDefine%
 ECHO =
