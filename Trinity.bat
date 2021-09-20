@@ -1,12 +1,11 @@
  @echo off
  
 color 0a
-title Butter Trinity v0.7.7
+title Butter Trinity v0.7.8
 goto boot
 :boot
 cls
 echo welcome!
-if exist welcome_box.vbs do start "C:\Users\%username%\Notepad++\msgbox.vbs" "X:\apps\SABER\welcome_box.vbs"
 timeout /T 1 /NOBREAK >nul
 cls
 echo finding kernel.......
@@ -29,9 +28,7 @@ echo Hello! %name% it is %time% now.
 echo.
 pause
 
-function CLCK (
-	 ECHO %time%
-)
+
 
 :menu
 cls
@@ -39,7 +36,7 @@ cls
 
 echo What Would You Like To Do? Type the number.
 echo.
-echo 1.System Info 2.useful tools menu 3.dates menu 4.change the text color 7.power options 8.Spinning Rage 9.productivity
+echo 1.System Info 2.useful tools menu 3.dates menu 4.change the text color 7.power options 8.Songs 9.productivity
 echo 6.browser menu 5.help 10.folder creator 11.list disks 12.email sender (under development) 14.Drive rec
 echo 15.randomness
 ECHO current time: %time% date: %date% name: %name% password: 9. 
@@ -53,7 +50,7 @@ if %input% == 4 goto randomColor
 if %input% == 5 goto help
 if %input% == 6 goto browserMenu
 if %input% == 7 goto powerOptions
-if %imput% == 8 goto spinningRage
+if %imput% == 8 goto songs
 if %input% == 9 goto productivity
 if %input% == "A" 
 if %input% == 6 goto GMenu
@@ -75,7 +72,7 @@ echo     Butter Trinity OS
 echo.========================
 echo     DETAILS  
 echo.
-echo     VERSION = 0.7.7
+echo     VERSION = 0.7.8
 echo.     
 echo     RAM = 1GB
 
@@ -332,3 +329,5 @@ echo do you want to let this program to change your kernel?
 set /p FD= Yes = 1 No = 2:
 if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
+:songs
+start chrome "https://www.youtube.com/watch?v=-345VbbYTN8"
