@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title Butter Trinity v0.7.6
+title Butter Trinity v0.7.7
 goto boot
 :boot
 cls
@@ -35,16 +35,11 @@ function CLCK (
 
 :menu
 cls
-SET bird[full]="█" "█" "█"
-SET /A "bird[rand]=!RANDOM! %% 2"
-        IF !bird[rand]! EQU 0 (
-            SET /A "bird[num]+=1", "bird[rand]=(!RANDOM! %% 15) + 1", "d[num]=(9 * bird[rand]) - 1", "d[adj]=((21 - (bird[rand] + 5)) * 9) - 1", "d[max]=bird[rand] + 5"
-            SET "bird[!bird[num]!]=!d[num]!;!d[adj]!;29;!bird[rand]!;!d[max]!"
-            SET "bird[list]=!bird[list]! [!bird[num]!]"
-        )
+
+
 echo What Would You Like To Do? Type the number.
 echo.
-echo 1.System Info 2.useful tools menu 3.dates menu 4.spinning rage 7.power options 8.GUI interface 9.productivity
+echo 1.System Info 2.useful tools menu 3.dates menu 4.change the text color 7.power options 8.Spinning Rage 9.productivity
 echo 6.browser menu 5.help 10.folder creator 11.list disks 12.email sender (under development) 14.Drive rec
 echo 15.randomness
 ECHO current time: %time% date: %date% name: %name% password: 9. 
@@ -54,11 +49,11 @@ set /p input= choose:
 if %input% == 1 goto info
 if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
-if %input% == 4 goto spinningRage
+if %input% == 4 goto randomColor
 if %input% == 5 goto help
 if %input% == 6 goto browserMenu
 if %input% == 7 goto powerOptions
-if %imput% == 8 goto GUIInterface
+if %imput% == 8 goto spinningRage
 if %input% == 9 goto productivity
 if %input% == "A" 
 if %input% == 6 goto GMenu
@@ -67,7 +62,11 @@ if %input% == 11 goto DriveDisplay
 if %input% == 12 start "C:\Users\drraj\Notepad++\msgbox.vbs" "C:\users\%username%\desktop\warning.vbs"
 if %input% == 14 goto DRVRecovery
 if %input% == 15 goto random
-
+:randomColor
+cls
+color 0c
+pause 
+goto menu
 :info
 
 cls
@@ -76,7 +75,7 @@ echo     Butter Trinity OS
 echo.========================
 echo     DETAILS  
 echo.
-echo     VERSION = 0.7.6
+echo     VERSION = 0.7.7
 echo.     
 echo     RAM = 1GB
 
@@ -283,13 +282,13 @@ echo please retype the email receipient
 echo data in the line>>filepath
 :settings
 cls
-echo press 1 to return to menu
+echo 1.return to menu 
 echo set the time:
 set /p OPT= new time
 set %time% == %OPT%
 if %OPT% == 1 goto menu
 :spinningRage
-call "C:\Users\%username%\OneDrive\Desktop\Flipp Flapp v1.2.bat"
+start "C:\Users\%username%\OneDrive\Desktop\Flipp Flapp v1.2.bat"
 :random
 cls 
 echo %random%%random%%random%%random%%random%%random%%random%
