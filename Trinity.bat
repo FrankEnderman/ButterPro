@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title Butter Trinity v3
+title Butter Trinity v3 SP 2
 goto boot
 :boot
 echo welcome!
@@ -32,7 +32,7 @@ cls
 
 echo What Would You Like To Do? Type the number.
 echo.
-echo 1.System Info 2.useful tools menu 3.dates menu 4.change the text color 7.controls 8.Songs 9.productivity
+echo 1.System Info 2.useful tools menu 3.dates menu 4.change the text color 7.controls 8.files 9.productivity
 echo 6.browser menu 5.help 10.folder creator 11.list disks 12.email sender (under development) 14.Drive rec
 echo 15.randomness
 ECHO current time: %time% date: %date% name: %name% 
@@ -46,7 +46,7 @@ if %input% == 4 goto randomColor
 if %input% == 5 goto help
 if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
-if %imput% == 8 goto songs
+if %imput% == 8 goto fileSystem
 if %input% == 9 goto productivity
 if %input% == "A" 
 if %input% == 6 goto GMenu
@@ -73,7 +73,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = 3
+echo     VERSION = 3 SP 2
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -86,7 +86,7 @@ timeout /T 1 /NOBREAK >nul
 echo     HARD_DRIVE = 250GB     
 echo.   
 timeout /T 1 /NOBREAK >nul
-echo     Kernel ver = 5.8.1
+echo     Kernel ver = 5.8.2
 timeout /T 1 /NOBREAK >nul
 echo.  
 echo    Build = 3
@@ -140,8 +140,9 @@ timeout /T 5 /NOBREAK >nul
 echo.
 pause
 cls
+
 echo.
-echo 1 update found!
+echo 1 update found! %random%%random%%random%%random%%random%%random%%random%.SFG pack available
 echo.
 pause
 goto menu
@@ -281,8 +282,8 @@ if %input% == 2 exit
 if %input% == 3 goto menu
 :fileSystem
 cls
-dir X:\
-echo 
+var GH == dir C:\users\%username%\desktop\
+echo %GH%
 echo 1.menu 
 set /p input= options
 if %input% == 1 goto menu
