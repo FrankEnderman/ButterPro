@@ -17,6 +17,12 @@
 | 0.9     | ✅                 | 26-11-2021      |
 | 1.0     | ✅                 | 4-12-2021       |
 | 2       | ✅                 | 10-12-2021      |
-
+| 3       | ✅                 | 14-12-2021      |
+| 3 SP 1  | ✅                 | 16-12-2021      |
+| 3 SP 2  | ✅                 | 20-12-2021      |
+| 3 SP 3  | ✅                 | 25-12-2021      |
+| 3 SP 4  | ✅                 | 28-12-2021      |
+| 3 SP 5  | ✅                 | 30-12-2021      |
+| 4       | ✅                 | 31-12-2021      |
 ## Reporting a Vulnerability
 email me at buttertheidiot@gmail.com to report a vulnerability. also pls specify a version
