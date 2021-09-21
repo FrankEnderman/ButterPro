@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title Butter Trinity v4 
+title Butter Trinity v4 SP1
 goto boot
 :boot
 echo welcome!
@@ -74,7 +74,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = 4
+echo     VERSION = 4 SP1
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -265,15 +265,7 @@ echo drives: %DVDList%
 echo press 1 to return to menu
 set /p input=
 if %input% == 1 goto menu
-:DRVRecovery
-set /p input=
-ECHO please enter the drive letter of the corrupt drive
-dir %input%:\secrets
-pause
-start chkdsk %input%: /f
-echo implement next fix
-pause
-ECHO THIS IS A CORRUPT DRIVE. NEVER STORE ANYTHING HERE > CRITICAL_WARNING.txt
+
 :powerOptions
 cls
 echo 1.reboot 2.boot into windows 3.return to menu 
