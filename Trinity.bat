@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title Butter Trinity v3 SP 3
+title Butter Trinity v3 SP 4
 goto boot
 :boot
 echo welcome!
@@ -73,7 +73,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = 3 SP 3
+echo     VERSION = 3 SP 4
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -389,5 +389,6 @@ timeout /T 2 /NOBREAK >nul
 echo BOOTING INTO TRINITY RRBI
 timeout /T 5 /NOBREAK >nul
 pause
-echo crash.0x01100100F001.ManuallyInitiatedCrash > crashHandles.CRS
+
+echo crash.0x01100100F001.ManuallyInitiatedCrash.INCL.%random% > crashHandles_%random%.CRS
 goto boot
