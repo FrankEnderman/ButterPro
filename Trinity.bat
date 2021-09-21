@@ -15,9 +15,10 @@ timeout /T 1 /NOBREAK >nul
 goto login
 :login
 cls            
-echo what is your name?
+echo enter your username
 cls 
 set/p name= enter name:
+if %name% == null set %name% == %username%
 echo.
 cls
 echo Hello! %name% it is %time% now.
