@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title Butter Trinity v3 SP 4
+title Butter Trinity v4 
 goto boot
 :boot
 echo welcome!
@@ -74,7 +74,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = 3 SP 4
+echo     VERSION = 4
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -87,7 +87,7 @@ timeout /T 1 /NOBREAK >nul
 echo     HARD_DRIVE = 250GB     
 echo.   
 timeout /T 1 /NOBREAK >nul
-echo     Kernel ver = 5.8.2
+echo     Kernel ver = 5.8.3
 timeout /T 1 /NOBREAK >nul
 echo.  
 echo    Build = 3
@@ -369,6 +369,8 @@ if %DFF% == 3 goto menu
 if %DFF% == 4 goto brokenMode
 :brokenMode
 cls
+echo =(
+timeout /T 2 /NOBREAK >nul
 echo %random%
 timeout /T 2 /NOBREAK >nul
 echo %random%%random%%random%%random%%random%%random%%random%
