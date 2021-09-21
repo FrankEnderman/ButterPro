@@ -1,9 +1,10 @@
  @echo off
  
 color 0a
-title Butter Trinity v4 SP1
+title Butter Trinity v4 SP2
 goto boot
 :boot
+cls
 echo welcome!
 timeout /T 1 /NOBREAK >nul
 echo finding kernel.......
@@ -74,7 +75,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = 4 SP1
+echo     VERSION = 4 SP2
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -386,4 +387,6 @@ timeout /T 5 /NOBREAK >nul
 pause
 
 echo crash.0x01100100F001.ManuallyInitiatedCrash.INCL.%random% > crashHandles_%random%.CRS
+echo Oh! we are taking you to the boot screen because you initiated a crash :)
+timeout /T 2 /NOBREAK >nul
 goto boot
