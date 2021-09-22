@@ -1,7 +1,7 @@
  @echo off
- 
+
 color 0a
-title Butter Trinity v4 SP2
+title Butter Trinity v4 SP3
 goto boot
 :boot
 cls
@@ -13,6 +13,7 @@ echo Booting Butter Trinity ...
 timeout /T 1 /NOBREAK >nul
 echo boot complete.... loading objects.....
 timeout /T 1 /NOBREAK >nul
+echo :-$ > BOOT.INF
 goto login
 :login
 cls            
@@ -75,7 +76,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = 4 SP2
+echo     VERSION = 4 SP3
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -199,67 +200,7 @@ echo Calculator lets you process math problems
 
 pause
 goto menu
-:FolderCreator
-cls
-echo Welcome to Project Folder Creator.
-echo Will create the following folder:
-echo %foldername%
-echo If this is okay,
-pause
 
-cls
-
-set foldername=Project
-
-md %foldername%
-
-cd %foldername%
-
-md cache
-
-cd cache
-
-md proxies
-
-cd md footage
-
-cd footage
-
-md img seq
-
-cd..
-
-md preview
-
-md projectfiles
-
-md references
-
-md renders
-
-cd renders
-
-md passes
-
-cd..
-
-cls
-
-cd..
-
-start %foldername%
-
-cd %foldername%
-
-echo Batch Complete!
-
-tree
-
-pause
-
-pause
-goto menu
-:DriveDisplay
 var DVDList == wmic logicaldisk get caption,volumename
 cls
 echo drives: %DVDList% 
@@ -274,13 +215,7 @@ set /p input=
 if %input% == 1 goto boot
 if %input% == 2 exit
 if %input% == 3 goto menu
-:fileSystem
-cls
-var GH == dir C:\users\%username%\desktop\
-echo %GH%
-echo 1.menu 
-set /p input= options
-if %input% == 1 goto menu
+
 :productivity
 
 echo 1.notes 2.calculator 3.menu
@@ -387,6 +322,7 @@ timeout /T 5 /NOBREAK >nul
 pause
 
 echo crash.0x01100100F001.ManuallyInitiatedCrash.INCL.%random% > crashHandles_%random%.CRS
-echo Oh! we are taking you to the boot screen because you initiated a crash :)
+echo Oh! we are taking you to the boot screen because you initiated a crash :) and we saved all your crash info to a file.
 timeout /T 2 /NOBREAK >nul
 goto boot
+
