@@ -1,7 +1,7 @@
  @echo off
 set EMOTE == ":D"
 color 0a
-title Butter Trinity v5 
+title Butter Trinity v5 Premium
 
 goto boot
 :boot
@@ -158,7 +158,7 @@ timeout /T 2 /NOBREAK >nul
 echo  @Copyright Interstar.inc 
 timeout /T 2 /NOBREAK >nul
 echo.
-echo  GPL Public Liscense 3.0
+echo  Beta Tests
 timeout /T 2 /NOBREAK >nul
 echo.=========================
 timeout /T 2 /NOBREAK >nul
